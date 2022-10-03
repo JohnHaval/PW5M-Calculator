@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PW5M_Calculator.MainPage">
+    <ScrollView>
+        <VerticalStackLayout
+            Spacing="5"
+            Padding="10,10"
+            VerticalOptions="EndAndExpand">
+            <Label Text="Результаты" FontSize="Body"/>            
+            <Frame VerticalOptions="StartAndExpand" HeightRequest="270">
+                <ScrollView>
+                    <StackLayout x:Name="Results">
+                    </StackLayout>
+                </ScrollView>
+            </Frame>
+            <Frame>
+                <Entry x:Name="ActionArea" IsReadOnly="True" Margin="10,0,10,0" VerticalOptions="StartAndExpand" Placeholder="Введите" ClearButtonVisibility="WhileEditing"/>
+            </Frame>
+            <StackLayout Orientation="Horizontal" VerticalOptions="FillAndExpand">
+                <Button x:Name="Clear" Text="AC" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Clear_Clicked"/>
+                <Button x:Name="Del" Text="~X" HorizontalOptions="FillAndExpand" Margin="3" Clicked="Del_Clicked"/>
+                <Button x:Name="Percent" Text="%" HorizontalOptions="FillAndExpand" Margin="3" Clicked="Percent_Clicked"/>
+                <Button x:Name="Division" Text="/" HorizontalOptions="FillAndExpand" Margin="3" Clicked="Division_Clicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="7" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Number_Clicked"/>
+                <Button Text="8" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Number_Clicked"/>
+                <Button Text="9" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Number_Clicked"/>
+                <Button x:Name="Imul" Text="*" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Imul_Clicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="4" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Number_Clicked"/>
+                <Button Text="5" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Number_Clicked"/>
+                <Button Text="6" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Number_Clicked"/>
+                <Button x:Name="Minus" Text="-" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Minus_Clicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button Text="1" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Number_Clicked"/>
+                <Button Text="2" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Number_Clicked"/>
+                <Button Text="3" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Number_Clicked"/>
+                <Button x:Name="Plus" Text="+" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Plus_Clicked"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Button x:Name="ClearResults" Text="[]" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="ClearResults_Clicked"/>
+                <Button Text="0" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Number_Clicked"/>
+                <Button x:Name="Point" Text="," HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Number_Clicked"/>
+                <Button x:Name="Equal" Text="=" HorizontalOptions="FillAndExpand" HeightRequest="60" Margin="3" Clicked="Equal_Clicked"/>
+            </StackLayout>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>
